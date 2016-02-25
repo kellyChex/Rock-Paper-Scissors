@@ -1,0 +1,34 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+
+<body>
+  <canvas></canvas>
+  <div class= "container">
+    <h1 id="title">Galactic <br> Rock-Paper-Scissors</h1>
+    <h2 id=title2> Enter your invisible answers </h2>
+
+    <div class="row">
+      <div class ="col-md-5 player_title">
+        <h2>Player One:</h2>
+        <h4>'a' for rock, 's' for paper, or 'd' for scissors:</h4>
+      </div>
+      <div class= "col-md-7 player_title">
+        <h2>Player Two:</h2>
+        <h4>'1' for rock, '2' for paper, or '3' for scissors: </h4>
+      </div>
+    </div> <!--player titles row -->
+
+  <%= render 'form' %>
+
+    <div class ="row">
+      <div class="col-md-5 score_title">
+        <%= GameScorer.player1_total %>
+      </div>
+      <div class="col-md-7 score_title">
+        <%= GameScorer.player2_total %>
+      </div>
+    </div> <!--row-->
+  </div> <!--container-->
+</body>
