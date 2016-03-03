@@ -1,32 +1,19 @@
- require 'rails_helper'
+require 'rails_helper'
 
-describe 'User creates a game', type: :feature do
-  it 'will show 0 as score for both players' do
-    visit root_path
-    page.fill_in 'game[player1]', with: 'a'
-    page.fill_in 'game[player2]', with: 1
-    click_button 'Shoot'
-    expect(page).to have_content("0")
+describe "instances_that_display_on_landing_page" do
+  before do
+    @game1 = Game.create(player1: 'a', player2: 3)
+    @game1.save
+    @game2 = Game.create(player1: 'a', player2: 3)
+    @game2.save
+    @game3 = Game.create(player1: 'a', player2: 3)
+    @game3.save
+    @game4 = Game.create(player1: 'a', player2: 3)
+    @game4.save
   end
 
   it 'will show score of 4 for player one' do
     visit root_path
-
-    page.fill_in 'game[player1]', with: 'a'
-    page.fill_in 'game[player2]', with: 3
-    click_button 'Shoot'
-
-    page.fill_in 'game[player1]', with: 'a'
-    page.fill_in 'game[player2]', with: 3
-    click_button 'Shoot'
-
-    page.fill_in 'game[player1]', with: 'a'
-    page.fill_in 'game[player2]', with: 3
-    click_button 'Shoot'
-
-    page.fill_in 'game[player1]', with: 'a'
-    page.fill_in 'game[player2]', with: 3
-    click_button 'Shoot'
 
     expect(page).to have_content("4")
   end
