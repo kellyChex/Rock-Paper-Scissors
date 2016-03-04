@@ -36,6 +36,12 @@ canvas {
   margin-left: 400px;
 }
 
+.notice {
+  margin-top: 30px;
+  margin-left: 400px;
+  color: silver;
+}
+
 body {
   background:#000 url(http://78waves.com/bg.jpg);
 }

@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="col-md-5">
     <%= form_for(@game) do |f| %>
@@ -10,8 +11,16 @@
       <%= f.text_field :player2 %>
     </div>
   </div>
-  <button type="button" class="actions btn">
-    <%= f.submit "Shoot" %>
-  </button>
+  <div class="row">
+  <div class "col-md-5">
+  </div>
+  <div class="col-md-2">
+    <button type="button" class="actions btn">
+      <%= f.submit "Shoot" %>
+    </button>
+  </div>
+  <div class "col-md-5">
+  </div>
+</div> <!-- row-->
     <% end %>
 </div> <!--player entries row-->
