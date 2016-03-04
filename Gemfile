@@ -16,9 +16,14 @@ end
 group :development, :test do
   gem 'pry-rails'
   gem 'byebug'
-  gem 'capybara'
   gem 'better_errors'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  # gem 'capybara-webkit'
+  # gem 'database_cleaner'
 end
 
 group :development do

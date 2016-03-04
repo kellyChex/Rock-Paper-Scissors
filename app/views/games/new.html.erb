@@ -29,6 +29,9 @@
       <div class="col-md-7 score_title">
         <%= GameScorer.player2_total %>
       </div>
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
     </div> <!--row-->
   </div> <!--container-->
 </body>
